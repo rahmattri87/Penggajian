@@ -1,0 +1,13 @@
+SELECT Data_pegawai.nip, Data_pegawai.nama, Data_jabatan.kode,;
+  Data_jabatan.jabatan, Data_jabatan.gapok, Jabatan_revisi.tjabatan,;
+  Jabatan_revisi.tpendidikan, Jabatan_revisi.tkesehatan,;
+  Jabatan_revisi.tkeahlian, Jabatan_revisi.tmakan,;
+  Jabatan_revisi.ttransport;
+ FROM ;
+     fee!data_pegawai ;
+    FULL JOIN fee!jabatan_revisi ;
+   ON  Data_pegawai.nip = Jabatan_revisi.nip ;
+    INNER JOIN fee!data_jabatan ;
+   ON  Data_jabatan.kode = Jabatan_revisi.kode ;
+    FULL JOIN fee!data_absensi ;
+   ON  Data_pegawai.nip = Data_absensi.nip

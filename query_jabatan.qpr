@@ -1,0 +1,12 @@
+SELECT Jabatan_revisi.nip, Jabatan_revisi.kode, Data_absensi.no_absen,;
+  Data_absensi.masuk, Data_absensi.sakit, Data_absensi.izin,;
+  Data_absensi.alpha, Data_absensi.lembur, Slip_gaji.no_slip;
+ FROM ;
+     fee!data_pegawai ;
+    INNER JOIN fee!jabatan_revisi ;
+   ON  Data_pegawai.nip = Jabatan_revisi.nip ;
+    INNER JOIN fee!data_absensi ;
+   ON  Data_pegawai.nip = Data_absensi.nip,;
+    fee!data_jabatan ;
+    INNER JOIN fee!slip_gaji ;
+   ON  Data_jabatan.kode = Slip_gaji.kode
